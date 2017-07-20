@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+body {
+    color: #444;
+    font-family: Oxygen,Helvetica Neue,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #eeeeee;
+    margin:0;
+}
+h1 {
+	font-size:2.35em;
+	line-height:1.5;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	width:80%;
+	font-weight:700;
+	padding-top:25px;
+}
+h2 {
+	font-size: 2em;
+	text-align: center;
+	padding-top: 25px;
+}
+h3 {
+	font-size: 1.5em;
+	text-align: center;
+	font-style: italic;
+	font-weight: normal;
+}
+p {
+	margin-bottom: 1.5em;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+a {
+	font-size: 1.1em;
+}
+#page {
+	overflow: auto;
+	width: 100%;
+}
+#header {
+    border-bottom: 1px solid black;
+    clear: both;
+    width:95%;
+    background: #eeeeee none repeat scroll 0 0;
+    position:fixed;
+    text-align:center;
+	right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+#content {
+    margin: 325px auto 0 auto; /*top right bottom left*/
+    overflow: auto; 
+    padding-bottom: 30px;
+    width: 95%;
+    clear:both;
+    border: 1px dotted transparent;
+}
+#contact-links {
+	clear:both;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+#menu {
+	padding-top:20px;
+	padding-bottom:21px;
+}
+a.text:link {
+    color: #0b5cba;
+    text-decoration: none;
+}
+a.text:visited {
+    color: #0b5cba;
+    text-decoration: none;
+}
+a.text:hover {
+    color: #0b5cba;
+    text-decoration: underline;
+}
+a.text:active {
+    color: #0b5cba;
+    text-decoration: none;
+}
+a.header:link {
+	color: black;
+    text-decoration: none;
+}
+a.header:visited {
+    color: black;
+    text-decoration: none;
+}
+a.header:hover {
+    color: grey;
+    text-decoration: underline;
+}
+a.header:active {
+    color: black;
+    text-decoration: none;
+}
+a.contact {
+	padding-left:6px;
+	padding-right:6px;
+	text-decoration: none;
+}
+.site-title {
+	font-size:90px;
+	line-height:1.5;
+	font-weight:700;
+}
+.linkheader {
+	padding-left:10px;
+	padding-right:10px;
+	font-size: 28px;
+}
+.textcenter {
+	text-align:center;
+}

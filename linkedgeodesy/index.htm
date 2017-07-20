@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+    <title>Linked Geodesy by Florian Thiery M.Sc.</title>
+	<link rel='stylesheet' media='screen and (min-width: 1001px) and (max-width: 2000px)' href='css/style.css' />
+	<link rel='stylesheet' media='screen and (min-width: 601px) and (max-width: 1000px) and (orientation: portrait)' href='css/small.css' />
+	<link rel='stylesheet' media='screen and (min-width: 601px) and (max-width: 1000px) and (orientation: landscape)' href='css/landscape.css' />
+	<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 600px)' href='css/small.css' />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="js/jquery.localScroll.js"></script>
+    <script>
+    $(document).ready(function() {
+       	var scrollOffset;
+       	var orientation;
+       	if (window.innerWidth<window.innerHeight) {
+       		orientation = "portrait";
+       	} else {
+       		orientation = "landscape";
+       	}
+       	if (window.innerWidth>1000) {
+       		scrollOffset = -250;
+       	} else if (window.innerWidth<1000 && orientation==="landscape") {
+       		scrollOffset = -230;
+       	} else if (window.innerWidth<1000 && orientation==="portrait") {
+       		scrollOffset = -325;
+       	}
+       	$('body').localScroll({
+           target:'body',
+           offset: scrollOffset
+        });
+    });
+    </script>
+</head>
+<body>
+<div id="page">
+	<div id="header">
+		<h1 class="site-title">Linked Geodesy</a></h1>
+		<div id="contact-links">
+        <a href="http://docs.linkedgeodesy.org" target="_blank" class="contact">
+            <img src="img/docs.png" height="50">
+        </a>
+        <a href="http://de.linkedin.com/in/florianthiery" target="_blank" class="contact">
+            <svg width="50px" height="50px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path class="social-icon-fill SocialIconFill" d="M82.3806444,80.7221807 L82.3806444,159.65156 L106.90504,159.65156 L106.90504,120.605335 C106.90504,110.310265 108.852259,100.338328 121.617533,100.338328 C134.189081,100.338328 134.369024,112.111232 134.369024,121.269978 L134.369024,159.65156 L158.87198,159.65156 L158.87198,116.357901 C158.87198,95.0977583 154.286864,78.7542871 129.463839,78.7542871 C117.529368,78.7542871 109.525325,85.2988733 106.249586,91.5027153 L105.914967,91.5027153 L105.914967,80.7221807 Z M100,0 C155.228474,-2.27373675e-14 200,44.771526 200,100 C200,155.228474 155.228474,200 100,200 C44.771526,200 -7.5791226e-15,155.228474 0,100 C0,44.771526 44.771526,1.51545443e-14 100,0 Z M54.7252307,41.4822291 C46.8620791,41.4822291 40.5058594,47.8568261 40.5058594,55.7023661 C40.5058594,63.556329 46.8620791,69.930926 54.7252307,69.930926 C62.5677078,69.930926 68.9423048,63.556329 68.9423048,55.7023661 C68.9423048,47.8568261 62.5677078,41.4822291 54.7252307,41.4822291 Z M42.4530786,80.7221807 L42.4530786,159.65156 L66.9950856,159.65156 L66.9950856,80.7221807 Z M42.4530786,80.7221807" fill="#444444"></path>
+                </g>
+            </svg>
+        </a>
+        <a href="https://twitter.com/fthierygeo" target="_blank" class="contact">
+			<svg width="50px" height="50px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+				<g fill-rule="evenodd">
+				<path class="social-icon-fill SocialIconFill" d="M100,0 C44.772,0 0,44.772 0,100 C0,155.228 44.772,200 100,200 C155.228,200 200,155.228 200,100 C200,44.772 155.228,0 100,0 Z M131.085844,49.1820697 C135.882815,50.1099098 141.754127,52.7769806 144.349825,55.2862809 L146.460943,57.2809493 L150.570486,56.2253903 C152.865669,55.6318732 156.377938,54.4335696 158.436466,53.5245117 C160.494994,52.6154537 162.373213,51.9430514 162.546009,52.1158475 C163.263489,52.8333271 159.112625,58.6745877 155.502689,61.9764964 L151.629801,65.5000349 L155.033134,65.0304802 C156.937648,64.7787989 160.247069,63.9786777 162.31311,63.268711 C164.551947,62.4986412 166.069548,62.2619857 166.069548,62.6827067 C166.069548,63.0696198 163.34613,66.0296927 160.081786,69.2564726 L154.21423,75.1240283 L153.744676,81.8142438 C152.294691,102.455869 144.781815,119.371108 130.852945,133.465262 C119.910442,144.53924 107.288811,151.270776 92.2330088,154.125669 C85.3925358,155.425396 72.9775093,155.85363 67.1099537,155.064778 C59.920132,154.099374 50.9873232,151.402252 43.6322182,147.905008 L37.0584523,144.734575 L43.9853234,144.26502 C52.2419734,143.746632 57.9404893,142.375532 64.529281,139.336574 C69.3976242,137.090224 75.832402,133.149721 75.3290393,132.646358 C75.1787818,132.496101 73.2855372,131.988982 71.1030469,131.590799 C63.2896566,130.159597 56.0021675,124.953174 52.3208586,117.973713 L50.5590893,114.57038 L55.9608467,114.217275 C61.3776298,113.879196 63.3309774,113.270653 61.0094989,112.571955 C53.9924733,110.46835 46.9341269,104.642115 43.7524242,98.3688646 C42.471479,95.840782 40.5819908,89.0153348 40.5819908,86.8666524 C40.5819908,86.7389335 41.2318546,87.0469614 41.990655,87.4526567 C43.4594221,88.2377522 52.1856268,90.1685611 52.5575141,89.8004302 C52.6777201,89.6802242 51.0436698,87.8658648 49.0339756,85.8110934 C47.0280379,83.756322 44.5675712,80.322938 43.5157687,78.1817685 C41.7878073,74.6544736 41.6413063,73.6402354 41.6375498,67.2655607 C41.6337934,61.852534 41.9230391,59.4709525 42.9297644,56.9353571 L44.221979,53.6484741 L46.9228576,56.6987015 C59.2477296,70.5186357 77.2523354,79.5265732 96.9285559,81.7015506 L100.684994,82.0546558 L100.452094,76.7731044 C100.189144,70.3383267 101.402473,65.7442034 104.678087,60.8082443 C109.681662,53.2578046 118.787267,48.5134238 127.445856,48.712515 C128.681724,48.7425665 129.880027,48.9491706 131.085844,49.1820697 Z" fill="#444444"></path>
+				</g>
+				</svg>
+			</a>
+			<a href="http://github.com/florianthiery" target="_blank" class="contact">
+				<svg width="50px" height="50px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<path class="social-icon-fill SocialIconFill" d="M0,100 C0,155.2286 44.7714,200 100,200 C155.2286,200 200,155.2286 200,100 C200,44.7714 155.2286,0 100,0 C44.7714,0 0,44.7714 0,100 Z M150.6562,25.4 C152.7698,28.626 153.9846,37.9372 153.1562,44.5938 L152.625,48.8562 L155.2062,51.9874 C160.3374,58.2082 163.155,65.7298 163.7186,74.725 C164.034,79.7584 163.3252,91.5746 162.4686,95.5688 C162.1878,96.8788 162.0424,98.0364 162.1498,98.1438 C162.2572,98.2512 166.8388,98.1216 172.331,97.8562 C178.1866,97.5734 183.088,97.5428 184.181,97.7812 C185.5178,98.0728 182.883,98.2622 174.8622,98.45 C168.6674,98.595 163.112,98.9354 162.4122,99.2124 C161.564,99.5484 161.0194,100.2144 160.7498,101.2436 C160.2702,103.0744 159.043,102.8318 172.0686,103.4686 C177.4508,103.7316 182.584,104.134 183.481,104.3624 C185.6578,104.9166 184.4476,104.941 180.456,104.4186 C178.6618,104.1838 173.3102,103.9562 168.5684,103.9186 L159.9496,103.8562 L158.362,106.575 C156.0142,110.5964 149.9218,116.4444 145.9182,118.5188 C141.0736,121.029 133.606,123.3814 127.037,124.4688 C123.8662,124.9936 120.9826,125.524 120.6308,125.6438 C120.1902,125.7938 120.6514,126.5576 122.1058,128.1126 C124.5016,130.674 125.7218,132.867 126.8246,136.5626 C127.4282,138.5848 127.6564,142.1844 127.887,153.6314 C128.1692,167.6364 128.1454,168.1478 127.287,168.4064 C124.4818,169.2516 119.346,170.5814 118.8808,170.5814 C118.4844,170.5814 118.2874,167.082 118.1496,157.6502 C117.9526,144.1822 117.7022,142.432 115.7496,140.8126 C115.0346,140.2196 114.9808,141.315 114.9808,155.8064 L114.9808,171.4376 L111.837,171.7814 C110.107,171.9716 107.8496,172.1466 106.8246,172.169 L104.9622,172.2128 L104.6684,163.8252 C104.5082,159.212 104.3504,151.712 104.3184,147.1628 L104.2622,138.894 L102.8684,138.894 L101.4684,138.894 L101.4684,155.669 L101.4684,172.444 L97.6246,172.369 C95.5102,172.328 93.0952,172.2098 92.2622,172.1066 L90.7498,171.919 L90.7498,155.8128 C90.7498,141.2492 90.6786,139.7714 90.0186,140.319 C87.8628,142.1082 87.7304,143.0656 87.5748,157.6628 L87.4248,171.544 L85.706,171.2316 C84.762,171.0588 82.6282,170.575 80.9622,170.1628 L77.9372,169.4128 L77.806,160.4004 L77.681,151.388 L75.3748,151.7068 C71.1312,152.2904 63.6152,152.0834 61.0248,151.313 C54.8256,149.4696 51.088,146.0926 47.831,139.3818 C45.0914,133.737 42.6232,130.4148 38.9622,127.4568 C35.1348,124.3644 34.4232,123.297 35.7246,122.6006 C36.2236,122.3336 37.7496,122.1218 39.1122,122.1256 C41.4146,122.132 45.6202,124.0678 48.212,126.4568 C49.3702,127.5244 51.2484,129.6986 52.387,131.2944 C57.1718,137.9996 62.2318,140.692 69.0246,140.1506 C72.9632,139.8368 77.6932,138.4634 78.1996,137.4882 C78.3978,137.1062 79.0304,135.5618 79.6058,134.057 C80.2762,132.3034 81.56,130.3448 83.1746,128.6008 C85.553,126.0318 85.6276,125.8664 84.6058,125.6632 C84.0104,125.5448 81.0126,125.0038 77.937,124.457 C66.5278,122.4286 58.1082,118.6336 51.7932,112.6694 C49.683,110.6764 47.272,107.974 46.4308,106.6632 L44.8996,104.2756 L34.8558,104.5632 C29.2726,104.7216 23.162,105.154 21.0996,105.5382 C17.7304,106.1658 16.5926,106.1826 17.1808,105.5944 C17.5474,105.2278 31.0384,103.96 37.7432,103.6632 C41.2674,103.5072 44.1494,103.181 44.1494,102.9382 C44.1494,102.6954 43.8384,101.891 43.4556,101.1506 C42.5108,99.3238 41.229,99.1882 27.2556,99.3694 C20.912,99.4518 15.7242,99.3752 15.7244,99.207 C15.7254,98.5884 25.0512,98.224 33.5932,98.507 C41.7982,98.7788 42.3604,98.7478 42.0682,97.9946 C41.8962,97.551 41.3,95.4044 40.7432,93.2258 C39.8556,89.7522 39.727,88.004 39.7244,79.0134 C39.7216,69.4458 39.7984,68.5452 40.8306,65.501 C42.279,61.2302 44.7806,56.4408 47.1994,53.326 L49.1432,50.826 L48.2308,46.976 C47.089,42.1816 47.2926,34.6312 48.7058,29.4948 C50.0216,24.7126 50.2068,24.5514 54.1558,24.8572 C59.2318,25.2504 65.6766,27.8206 73.7434,32.6634 L77.4746,34.901 L81.1996,34.001 C92.476,31.2752 108.7204,31.018 120.7496,33.376 L124.4184,34.0948 L128.2622,31.7386 C133.5286,28.509 138.6762,26.2346 143.1434,25.1636 C145.3898,24.624 146.9306,24.3292 148.0312,24.2876 C149.4462,24.234 150.1326,24.601 150.6562,25.4 Z M44.8113392,125.5 C43.8279276,125.5 43.5,125.686465 43.5,126.256901 C43.5,127.558949 44.7160805,128.004007 46.0532305,127.191897 C47.0542826,126.583882 46.2569319,125.5 44.8113392,125.5 L44.8113392,125.5 L44.8113392,125.5 Z M41.3302053,123.6 C40.4451349,123.6 40.15,123.786465 40.15,124.356901 C40.15,125.658949 41.2444724,126.104007 42.4479075,125.291897 C43.3488544,124.683882 42.6312387,123.6 41.3302053,123.6 L41.3302053,123.6 L41.3302053,123.6 Z M48.3,128.7376 C47.3198,128.7494 46.7682,129.372 47.1124,130.2688 C47.505,131.2918 49.9122,131.027 50.1186,129.9376 C50.2206,129.3996 49.8658,129.0394 49.0374,128.8314 C48.7708,128.7642 48.5262,128.7348 48.3,128.7376 L48.3,128.7376 L48.3,128.7376 Z M51.1688,132.8312 C49.4992,132.8312 48.8476,133.6996 49.925,134.4874 C50.986,135.2632 52.5374,134.8028 52.5374,133.7124 C52.5376,133.052 52.2002,132.8312 51.1688,132.8312 L51.1688,132.8312 L51.1688,132.8312 Z M53.95,136.175 C53.8814,136.175 53.8118,136.1778 53.7438,136.1874 C53.1452,136.273 52.7166,136.7296 52.625,137.375 C52.4988,138.263 52.6868,138.425 53.875,138.425 C54.6466,138.425 55.416,138.205 55.5812,137.9374 C56.016,137.234 54.9778,136.1766 53.95,136.175 L53.95,136.175 L53.95,136.175 Z M57.7124,139.4062 C56.6628,139.4298 56.0858,140.0874 56.4312,140.9874 C56.871,142.1332 59.2936,141.7424 59.2936,140.525 C59.2936,139.8996 58.9332,139.5422 58.1936,139.4374 C58.0258,139.4138 57.8624,139.403 57.7124,139.4062 L57.7124,139.4062 L57.7124,139.4062 Z M74.4376,140.2876 C73.9878,140.2876 73.363,140.6032 73.0438,140.9876 C72.3314,141.8458 73.1532,143.0876 74.4376,143.0876 C74.8874,143.0876 75.5184,142.772 75.8376,142.3876 C76.5498,141.5294 75.7218,140.2876 74.4376,140.2876 L74.4376,140.2876 L74.4376,140.2876 Z M68.7624,141.2438 C67.7892,141.3118 67.1762,142.1646 67.6312,143.35 C67.9936,144.294 69.7554,144.0466 70.4312,142.9562 C70.8276,142.3162 70.7836,142.0254 70.2436,141.6812 C69.718,141.3462 69.2048,141.213 68.7624,141.2438 L68.7624,141.2438 L68.7624,141.2438 Z M63.275,141.3188 C62.6408,141.3448 62.0504,141.7068 61.9312,142.3312 C61.6416,143.8496 63.6208,144.5664 64.6562,143.3188 C65.1198,142.7602 65.116,142.4766 64.6374,141.9 C64.2926,141.4844 63.7684,141.2986 63.275,141.3188 L63.275,141.3188 L63.275,141.3188 Z M63.275,141.3188" fill="#444444"></path>
+					</g>
+				</svg>
+			</a>
+            <a href="http://orcid.org/0000-0002-3246-3531" target="_blank" class="contact">
+                <img src="img/orcid-logo.png" height="50">
+            </a>
+            <a href="mailto:in%66o@li%6e%6be%64%67%65o%64%65s%79.org" target="_blank" class="contact">
+				<svg width="50px" height="50px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<path class="social-icon-fill SocialIconFill" d="M47.525,58.4312 C44.0017303,58.4312 40.8759923,60.0775002 38.8740909,62.6461034 L99.75,94.8175812 L163.968171,60.8797969 C162.084984,59.347607 159.678721,58.4312 157.05,58.4312 Z M36.8768341,66.781991 C36.6754591,67.614632 36.5688,68.4849911 36.5688,69.3812 L36.5688,129.6188 C36.5688,135.6864 41.4574,140.5688 47.525,140.5688 L157.05,140.5688 C163.1176,140.5688 168,135.6864 168,129.6188 L168,69.3812 C168,67.6380936 167.597054,65.9928022 166.878815,64.5329757 L99.7671275,100 L99.75,99.9564542 L99.7328725,100 Z M100,0 C155.2286,0 200,44.7714 200,100 C200,155.2286 155.2286,200 100,200 C44.7714,200 0,155.2286 0,100 C0,44.7714 44.7714,0 100,0 Z M173,61.2980665 L171.309648,57 Z M173,61.2980665" fill="#444444"></path>
+					</g>
+				</svg>
+			</a>
+		</div>
+		<div id="menu">
+			<a class="linkheader header" id="m_cv" href="#cv">Curriculum Vitae</a>
+			<a class="linkheader header" id="m_masterstudies" href="#masterstudies">Master Studies</a>
+			<a class="linkheader header" id="m_bachelorstudies" href="#bachelorstudies">Bachelor Studies</a>
+			<a class="linkheader header" id="m_imprint" href="#imprint">Legal Notice</a>
+		</div>
+	</div>
+	<div id="content">
+		<span id="cv">
+			<h1>Curriculum Vitae</h1>
+			<p class="textcenter"><img src="img/thiery_7_17.jpg" height="300" alt="Florian Thiery M.Sc."></p>
+			<h3>Florian Thiery M.Sc.</h3>
+			<p class="textcenter"><i>Geodesist &. Software Developer with passion for Linked Data</i></p>
+			<h2>Professional Experience</h2>
+			<p class="textcenter">since 2/2016: Computer Scientist @<br><a class="text" href="http://rgzm.de/" target="_blank">Römisch- Germanisches Zentralmuseum (RGZM)</a></p>
+			<p class="textcenter">since 1/2014: Research Associate @<br><a class="text" href="http://i3mainz.hs-mainz.de/" target="_blank">Institute for Spatial Information and Surveying Technology,<br> Hochschule Mainz University of Applied Sciences (i3mainz)</a></p>
+            <p class="textcenter">7/2011-8/2011: Research Associate @<br><a class="text" href="http://i3mainz.hs-mainz.de/" target="_blank">Institute for Spatial Information and Surveying Technology,<br> Hochschule Mainz University of Applied Sciences (i3mainz)</a></p>
+            <p class="textcenter">since 2015: Associate @<br><a class="text" href="http://mainzed.org/" target="_blank">Mainz Centre for Digitality in the Humanities and Cultural Studies (mainzed)</a></p>
+			<h2>Education</h2>
+			<p class="textcenter">2011 – 2013<br>Master of Science<br><a class="text" href="http://hs-mainz.de" target="_blank">Fachhochschule Mainz</a><br>Geoinformatics and Surveying</p>
+			<p class="textcenter">2007– 2011<br>Bachelor of Science<br><a class="text" href="http://hs-mainz.de" target="_blank">Fachhochschule Mainz</a><br>Geoinformatics and Surveying</p>
+			<p class="textcenter">2006<br>Allgemeine Hochschulreife<br><a class="text" href="http://www.nwg-speyer.de/" target="_blank">Nikolaus-von-Weis-Gymnasium Speyer</a></p>
+			<p class="textcenter">2003<br>Qualifizierter Sekundarabschluss I<br><a class="text" href="http://www.rsplus-limburgerhof.de/" target="_blank">Realschule Limburgerhof</a></p>
+			<h2>Publications</h2>
+			<p class="textcenter">more at&nbsp;<a class="text" href="http://docs.linkedgeodesy.org" target="_blank">Linked Geodesy Docs!</a>
+			<h2>Research Projects (extract)</h2>
+			<p class="textcenter"><a class="text" href="http://i3mainz.hs-mainz.de/de/projekte/chronontology" target="_blank">ChronOntology</a> (<a class="text" href="http://gepris.dfg.de/gepris/projekt/247900032" target="_blank">funded by DFG</a>)</p>
+			<p class="textcenter"><a class="text" href="http://i3mainz.hs-mainz.de/de/projekte/labelingsystem" target="_blank">Labeling System</a></p>
+			<h2>Commitment</h2>
+			<p class="textcenter"><a class="text" href="http://fv.kongeos.de/" target="_blank">Förderverein der Konferenz der GeodäsieStudierenden</a></p>
+			<p class="textcenter"><a class="text" href="http://www.vdv-online.de/" target="_blank">Verband Deutscher Vermessungsingenieure e. V.</a></p>
+			<p class="textcenter"><a class="text" href="http://kongeos.de/" target="_blank">Konferenz der GeodäsieStudierenden</a></p>
+			<p class="textcenter"><a class="text" href="http://daeumling.info/" target="_blank">Däumling e.V. – Verein zur Förderung von Früh- und Risikogeborenen</a></p>
+		</span>
+		<span id="masterstudies">
+			<h1 id="ms">Master Studies</h1>
+			<h2>Diploma Supplement Information</h2>
+			<ul>
+				<li>Qualification / Title conferred: Master of Science (M.Sc.)&nbsp;awarded 19/12/2013</li>
+				<li>Main field of Studies: Geoinformatics and Surveying</li>
+				<li>Awarding Institution: Fachhochschule Mainz – University of Applied Sciences</li>
+				<li>Language of Instruction / Eximination: German</li>
+				<li>Level of Qualification: Advanced university degree</li>
+				<li>Official Length of Programme: Two years (120 ECTS credits)</li>
+				<li>Access Requirements: Bachelor degree in Geoinformatics and Surveying (180 ECTS credits) or equivalent</li>
+				<li>Mode of Study: Full-time Programme</li>
+				<li>Programme Requirements: 90 ECTS credits in studies, 30 ECTS credits in master thesis. Internship during the semester breaks are usual, but not mendatory</li>
+				<li>Programme Details: Mr. Thiery earned credits at the Fachhochschule Mainz – University of Applied Sciences during 5 semesters</li>
+				<li>Professional Status: Not applicable</li>
+				<li>Access to Further Sudies: The award gives access to postgraduate and doctoratelevel studies in Geoinformatics and Surveying; for beeing admitted to doctoral studies the holder of this award must in addition to the award prove his abibilty to pursue doctoral studies.</li>
+				<li><b>German Mark: 1,5 (very good)</b></li>
+			</ul>
+			<h2>Courses: Genaral and Basics</h2>
+			<ul>
+				<li>Geometric modelling&nbsp;(Prof. Klinge) [6 ECTS]</li>
+				<li>Special Methods in Adjustment and Statistics&nbsp;(Prof. Czommer) [6 ECTS]</li>
+				<li>Human Resource and Project Management (Prof. Nagel) [6 ECTS]</li>
+				</ul>
+			<h2>Courses: Geoinformatics</h2>
+			<ul>
+				<li>Development of Interactive Graphical Applications&nbsp;(Prof. Böhm) [6 ECTS]</li>
+				<li>Process-oriented&nbsp;Programming (Prof. Kern) [6 ECTS]</li>
+				<li>Geodata Modelling and Algorithms&nbsp;(Prof. Müller) [6 ECTS]</li>
+				<li>Digital Image Analysis&nbsp;(Prof. Boochs / Prof. Kern) [6 ECTS]</li>
+				<li>Software-Engineering (Prof. Böhm) [6 ECTS]</li>
+				<li>Interdisciplinary Applications of Spatial Information Techniques (Prof. Bruhn) [6 ECTS]</li>
+				<li>Ubiquitous Geographic Information Systems&nbsp;(Prof. Klinge) [6 ECTS]</li>
+			</ul>
+			<h2>Courses: Surveying</h2>
+			<ul>
+				<li>Landmanagement (Prof. Bohr / Dipl.-Ing. Prager) [6 ECTS]</li>
+				<li>Interdisciplinary Applications of Spatial Surveying&nbsp;Techniques&nbsp;(Prof. Bruhn) [6 ECTS]</li>
+			</ul>
+			<h2>Project [18 ECTS]</h2>
+			<ul>
+				<li>“Health Geography” – Zugang zu hausärtzlicher Versorgung</li>
+				<li>Supervisors:&nbsp;Prof. Dr.-Ing. Hartmut Müller&nbsp;and&nbsp;Dr. med. Anne Dahlhaus</li>
+			</ul>
+			<h2>Master&nbsp;Thesis (30 ECTS; German Mark 1,0)</h2>
+			<ul>
+				<li><a class="text" href="http://master.florian-thiery.de/" target="_blank">Semantic Web und Linked Data: Generierung von Interoperabilität in&nbsp;archäologischen Fachdaten am Beispiel römischer Töpferstempel</a></li>
+				<li>Supervisor: Prof. Dr. phil. Kai-Christian Bruhn</li>
+				<li>Partner: <a class="text" title="i3mainz" href="http://www.i3mainz.fh-mainz.de/" target="_blank">i3mainz</a>&nbsp;–&nbsp;Institut für Raumbezogene Informations- und Messtechnik</li>
+				<li>Partner:&nbsp;<a class="text" title="RGZM" href="http://www.rgzm.de/" target="_blank">RGZM</a>&nbsp;(Römisch-Germanisches Zentralmuseum Mainz)</li>
+			</ul>
+		</span>
+		<span id="bachelorstudies">
+			<h1>Bachelor&nbsp;Studies</h1>
+			<h2>Diploma Supplement Information</h2>
+			<ul>
+				<li>Qualification / Title conferred: Bachelor&nbsp;of Science (B.Sc.)&nbsp;awarded 08/06/2011</li>
+				<li>Main field of Studies: Geoinformatics and Surveying</li>
+				<li>Awarding Institution: Fachhochschule Mainz – University of Applied Sciences</li>
+				<li>Language of Instruction / Eximination: German, with the exception of the module Geoinformatics and Surveying</li>
+				<li>Level of Qualification: First&nbsp;university degree</li>
+				<li>Official Length of Programme: Three&nbsp;years (180 ECTS credits)</li>
+				<li>Access Requirements:&nbsp;Completed Upper Secondary School plus 12 weeks internship or equivalent</li>
+				<li>Mode of Study: Full-time Programme</li>
+				<li>Programme Requirements: During the studies the programme includes a practical project in a private company or Government agency supervised by the university. 144&nbsp;ECTS credits in mandatory studies, 6 ECTS credits in elective studies, 18 ECTS credits in an internship with practical projects, 12&nbsp;ECTS credits in bachelor&nbsp;thesis. Internship during the semester breaks are usual, but not mendatory</li>
+				<li>Programme Details: Mr. Thiery earned credits at the Fachhochschule Mainz – University of Applied Sciences during 8&nbsp;semesters</li>
+				<li>Professional Status: Not applicable</li>
+				<li>Access to Further Sudies: The award gives access to postgraduate and doctoratelevel studies in Geoinformatics and Surveying or equivalent</li>
+				<li><b>German Mark: 2,3&nbsp;(good)</b></li>
+			</ul>
+			<h2>Courses: Mathematical/Physical/Geodetic Basics and&nbsp;Management Tools</h2>
+			<ul>
+				<li>Mathematics&nbsp;1 (Prof. Schlüter) [6 ECTS]</li>
+				<li>Mathematics&nbsp;2 (Prof. Zaiser) [6 ECTS]</li>
+				<li>Fundamentals of Sensor Technology&nbsp;(Prof. Neitzel) [6 ECTS]</li>
+				<li>Geodetic Computations&nbsp;(Prof. Leonhard) [6 ECTS]</li>
+				<li>Computer Aided Design [CAD] (Prof. Zaiser)&nbsp;[6 ECTS]</li>
+				<li>Adjustment&nbsp;and Statistics&nbsp;(Prof. Zaiser) [6 ECTS]</li>
+				<li>Geodetic&nbsp;Reference Systems&nbsp;(Prof. Hotzel) [6 ECTS]</li>
+				<li>English Terminology&nbsp;(Prof. Böhm) [6 ECTS]</li>
+				<li>Presentation Techniques (Prof. Neitzel) [4 ECTS]</li>
+				<li>Law&nbsp;(Dr. Gericke / Fr. Weilert) [2 ECTS]</li>
+				<li>Fundamentals of Business and Project Management&nbsp;(Dipl.-Volksw. Hasslinger)&nbsp;[6 ECTS]</li>
+			</ul>
+			<h2>Courses:&nbsp;Geoinformatics</h2>
+			<ul>
+				<li>Computer Science&nbsp;(Prof. Neitzel)&nbsp;[6 ECTS]</li>
+				<li>Object-Oriented Programming&nbsp;(Prof. Neitzel)&nbsp;[6 ECTS]</li>
+				<li>Software Application Development&nbsp;(Prof. Boochs)&nbsp;[6 ECTS]</li>
+				<li>Databases and Internet (Prof. Böhm / Prof. Bruhn)&nbsp;[6 ECTS]</li>
+				<li>Digital Image&nbsp;Processing&nbsp;(Prof. Kern)&nbsp; [6 ECTS]</li>
+				<li>Introduction to Geoinformatics&nbsp;(Prof. Bruhn)&nbsp;[6 ECTS]</li>
+				<li>Authoritative Basic Geo-databases&nbsp;(Prof. Müller)&nbsp;[6 ECTS]</li>
+				<li>Cartography (Prof. Kern) [6 ECTS]</li>
+			</ul>
+			<h2>Courses: Surveying</h2>
+			<ul>
+				<li>Surveying&nbsp;1 (Prof. Klonowski) [6 ECTS]</li>
+				<li>Surveying&nbsp;2 (Prof. Klonowski) [6 ECTS]</li>
+				<li>Surveying&nbsp;3 (Prof. Klonowski) [6 ECTS]</li>
+				<li>Surveying&nbsp;4 (Prof. Leonhard) [6 ECTS]</li>
+				<li>Surveying&nbsp;5 (Prof. Klonowski) [6 ECTS]</li>
+				<li>Photogrammetric Data Acquisition&nbsp;(Prof. Schlüter) [6 ECTS]</li>
+				<li>Municipal Land Management and Land Development&nbsp;(Prof. Lohrig / Prof. Bohr) [6 ECTS]</li>
+				</ul>
+			<h2>Internship with Practical Project [18 ECTS]</h2>
+			<ul>
+				<li>i3mainz – Institut für Raumbezogene Informations- und Messtechnik</li>
+				<li>Ada-Lovelace-Projekt (ALP)</li>
+				<li>Lehreinheit Bauingenieurwesen</li>
+			</ul>
+			<h2>Bachelor&nbsp;Thesis (12 ECTS; German Mark: 1,7)</h2>
+			<ul>
+				<li><a class="text" href="http://bachelor.florian-thiery.de/" target="_blank">Eigunung aktueller Industriekameras für modulare Digitalkameratachymeter</a></li>
+				<li>Supervisor: Prof. Dr.-Ing. Martin Schlüter</li>
+				<li>Partner: <a class="text" title="i3mainz" href="http://www.i3mainz.fh-mainz.de/" target="_blank">i3mainz</a>&nbsp;– Institut für Raumbezogene Informations- und Messtechnik</li>
+			</ul>
+		</span>
+		<span id="imprint">
+			<h1>Legal Noticer</h1>
+			<h2>Information according to § 5 TMG</h2>
+			<p class="textcenter">
+				<i>Florian Thiery</i><br>
+				<i>Josef-Traxel-Weg 4</i><br>
+				<i>55128 Mainz</i>
+			</p>
+			<p class="textcenter">E-Mail: webmaster [at] florian-thiery.de</p>
+			<h2>Limitation of liability for internal content</h2>
+			<p class="textcenter">The content of our website has been compiled with meticulous care and to the best of our knowledge. However, we cannot assume any liability for the up-to-dateness, completeness or accuracy of any of the pages.</p>
+			<p class="textcenter">Pursuant to section 7, para. 1 of the TMG (Telemediengesetz – Tele Media Act by German law), we as service providers are liable for our own content on these pages in accordance with general laws. However, pursuant to sections 8 to 10 of the TMG, we as service providers are not under obligation to monitor external information provided or stored on our website. Once we have become aware of a specific infringement of the law, we will immediately remove the content in question. Any liability concerning this matter can only be assumed from the point in time at which the infringement becomes known to us.</p>
+			<h2>Limitation of liability for external links</h2>
+			<p class="textcenter">Our website contains links to the websites of third parties (“external links”). As the content of these websites is not under our control, we cannot assume any liability for such external content. In all cases, the provider of information of the linked websites is liable for the content and accuracy of the information provided. At the point in time when the links were placed, no infringements of the law were recognisable to us. As soon as an infringement of the law becomes known to us, we will immediately remove the link in question.</p>
+			<h2>Copyright</h2>
+			<p class="textcenter">The content and works published on this website are governed by the copyright laws of Germany. Any duplication, processing, distribution or any form of utilisation beyond the scope of copyright law shall require the prior written consent of the author or authors in question.</p>
+			<h2>Data protection</h2>
+			<p class="textcenter">A visit to our website can result in the storage on our server of information about the access (date, time, page accessed). This does not represent any analysis of personal data (e.g., name, address or e-mail address). If personal data are collected, this only occurs – to the extent possible – with the prior consent of the user of the website. Any forwarding of the data to third parties without the express consent of the user shall not take place.</p>
+			<p class="textcenter">We would like to expressly point out that the transmission of data via the Internet (e.g., by e-mail) can offer security vulnerabilities. It is therefore impossible to safeguard the data completely against access by third parties. We cannot assume any liability for damages arising as a result of such security vulnerabilities.</p>
+			<p class="textcenter">The use by third parties of all published contact details for the purpose of advertising is expressly excluded. We reserve the right to take legal steps in the case of the unsolicited sending of advertising information; e.g., by means of spam mail.</p>
+		</span>
+	</div>
+</div>
+</body>
+</html>
