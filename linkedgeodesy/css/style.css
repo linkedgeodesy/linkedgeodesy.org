@@ -97,18 +97,22 @@ a.text:active {
 a.header:link {
 	color: #1F4554;
     text-decoration: none;
+    font-weight: 400;
 }
 a.header:visited {
     color: #1F4554;
     text-decoration: none;
+    font-weight: 400;
 }
 a.header:hover {
     color: #1F4554;
     text-decoration: underline;
+    font-weight: 400;
 }
 a.header:active {
     color: #1F4554;
     text-decoration: none;
+    font-weight: 400;
 }
 a.contact {
 	padding-left:6px;
