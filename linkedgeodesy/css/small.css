@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100italic,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100);
 body {
-    color: #444;
-    font-family: Oxygen,Helvetica Neue,Arial,sans-serif;
-    font-weight: 400;
+    color: #1F4554;
+    /*font-family: Oxygen,Helvetica Neue,Arial,sans-serif;*/
+    font-family: "Roboto",sans-serif !important;
+    font-weight: 300;
     line-height: 1.5;
     text-align: left;
-    background-color: #eeeeee;
+    background-color: #F2F1ED;
     margin:0;
 }
 h1 {
@@ -42,10 +44,11 @@ a {
 	width: 100%;
 }
 #header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #1F4554;
     clear: both;
-    width:95%;
-    background: #eeeeee none repeat scroll 0 0;
+    max-width:60em;
+    width:60%;
+    background: #F2F1ED none repeat scroll 0 0;
     position:fixed;
     text-align:center;
 	right: 0;
@@ -55,7 +58,7 @@ a {
 }
 #content {
     margin: 325px auto 0 auto; /*top right bottom left*/
-    overflow: auto; 
+    overflow: auto;
     padding-bottom: 30px;
     width: 95%;
     clear:both;
@@ -71,35 +74,39 @@ a {
 	padding-bottom:21px;
 }
 a.text:link {
-    color: #0b5cba;
+    color: #618491;
     text-decoration: none;
+    font-weight: 400;
 }
 a.text:visited {
-    color: #0b5cba;
+    color: #618491;
     text-decoration: none;
+    font-weight: 400;
 }
 a.text:hover {
-    color: #0b5cba;
+    color: #618491;
     text-decoration: underline;
+    font-weight: 400;
 }
 a.text:active {
-    color: #0b5cba;
+    color: #618491;
     text-decoration: none;
+    font-weight: 400;
 }
 a.header:link {
-	color: black;
+	color: #1F4554;
     text-decoration: none;
 }
 a.header:visited {
-    color: black;
+    color: #1F4554;
     text-decoration: none;
 }
 a.header:hover {
-    color: grey;
+    color: #1F4554;
     text-decoration: underline;
 }
 a.header:active {
-    color: black;
+    color: #1F4554;
     text-decoration: none;
 }
 a.contact {
