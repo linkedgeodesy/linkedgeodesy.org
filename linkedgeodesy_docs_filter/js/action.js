@@ -56,7 +56,7 @@ $(document).ready(function() {
             languagesListGUI.push(obj[i].language);
             yearListGUI.push(obj[i].year); // slider
             licensesListGUI.push(obj[i].license);
-            conferencesListGUI.push(obj[i]["conference-short"]);
+            conferencesListGUI.push(obj[i]["conference_short"]);
             venuesListGUI.push(obj[i].venue);
         }
         // get single elements in array
@@ -167,7 +167,7 @@ function initFilters() {
             field: 'license',
             ele: '#licenses_criteria input:checkbox'
         }, {
-            field: 'conference-short',
+            field: 'conference_short',
             ele: '#conferences_criteria input:checkbox'
         }, {
             field: 'venue',
