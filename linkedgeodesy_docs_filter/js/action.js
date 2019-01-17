@@ -40,11 +40,14 @@ $(document).ready(function() {
     });
     $("#map").show();
     // get data from server
-    $.getJSON("data.json", function(response) {
+    let a = null;
+    $.getJSON("https://www.jsonstore.io/fd160c1473ec15cf2f5013238db097926a16f95402cb668c3adafb409cfe32a3/pub/", function(response) {
         try {
-            response = JSON.parse(response);
+            a = response.result;
+            a = response.shift();
+            console.log(a);
         } catch (e) {}
-        obj = response;
+        obj = a;
         for (var i = 0; i < obj.length; i++) {
             split = obj[i].authors;
             for (var j = 0; j < split.length; j++) {
